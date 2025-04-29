@@ -85,7 +85,8 @@ async function main() {
     const startDateFormatted = formatDateForFileName(startDate);
     const endDateFormatted = formatDateForFileName(endDate);
 
-    const outputDir = __dirname;
+    const outputDir = path.join(__dirname, 'exports', 'concat')
+    fs.existsSync(outputDir);
 
     console.log('saving zip')
 

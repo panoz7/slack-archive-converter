@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "process": "node index.js",
+    "concat": "node concat.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
