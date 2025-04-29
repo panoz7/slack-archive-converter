@@ -86,7 +86,11 @@ async function main() {
     const endDateFormatted = formatDateForFileName(endDate);
 
     const outputDir = path.join(__dirname, 'exports', 'concat')
-    fs.existsSync(outputDir);
+
+    // Make sure the output folder exists
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
 
     console.log('saving zip')
 

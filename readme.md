@@ -13,13 +13,13 @@ The tool has two main commands:
 - [Concat](#concat) - Combines two archive zips into a single new zip 
 
 ### Process
-`npm run process.js {path to slack export zip}`
+`npm run process {path to slack export zip}`
 The process command takes a slack export zip and converts it into an archive. Depending on the number of attachments this command could take a while to run. 
 
 The resulting archive zips will be placed in a "export" folder within this project with the name slack-archive-YYYYMMDD-YYYYMMDD. The dates are the start and end date for the original slack export (which doesn't neccessarily match the start and end date of the actual messages). 
 
 ### Concat
-`npm run concat.js {path to first slack archive} {path to second slack archive}`
+`npm run concat {path to first slack archive} {path to second slack archive}`
 The concat command takes two slack archives and combines them into one new archive, retaining all the original files and logs, but merging the transcript files. 
 
 The original archive zips will be retained. The combined archive zip will be placed in a "export/concat" folder within this project with the name slack-archive-YYYYMMDD-YYYYMMDD. The start date is the earliest date of the two source archives and the end date is the latest end date of the two archives. 
