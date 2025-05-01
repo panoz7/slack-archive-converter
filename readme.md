@@ -13,8 +13,8 @@ The tool has two main commands:
 - [Concat](#concat) - Combines two archive zips into a single new zip 
 
 ### Process
-`npm run process {path to slack export zip}`
-The process command takes a slack export zip and converts it into an archive. Depending on the number of attachments this command could take a while to run. 
+`npm run process {path to slack export zip} {startDate} {endDate}`
+The process command takes a slack export zip and converts it into an archive. Depending on the number of attachments this command could take a while to run. The startDate and endDate arguments are optional, though if you use one you need to use both. They can be used when the resulting archive would be too large to use. 
 
 The resulting archive zips will be placed in a "export" folder within this project with the name slack-archive-YYYYMMDD-YYYYMMDD. The dates are the start and end date for the original slack export (which doesn't neccessarily match the start and end date of the actual messages). 
 
